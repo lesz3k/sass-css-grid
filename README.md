@@ -6,8 +6,8 @@ CSS grid calculated with SASS
 This is a simple SASS that caluculates given values into specified grid. 
 
 How to compile:
-1. set up $content-width - a default max width for your page in px (eg. 980px)
-2. set up $spans - as a number of 'columns' you want your grid to be divided into (eg. 16)
+1. set up $content-width - a default max width for your page in px (eg. 980px) 
+2. set up $spans - as a number of 'columns' you want your grid to be divided into (eg. 16) 
 3. set up $spacing and $padding (both optional) - $spacing as a margin between columns and $padding as padding between them (eg. 20px).
     In my example I set $spacing: $base-gutter; because I have already prepared $base-gutter variable as a base value for margins and paddings throught the page.
 
