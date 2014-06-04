@@ -1,0 +1,41 @@
+$content-width: 980px;
+$spans: 16;
+
+#content, .content-grid {
+	
+  max-width: $content-width;
+  margin:0 auto;
+  .row {
+    clear: both;
+    width: 100%;
+	@include clearfix;
+    $spacing: $base-gutter; 
+    $padding: 0px;
+	
+    .span#{$spans}{width:100% !important;}
+	
+    @for $i from 1 through $spans {
+		
+	@media (min-width: 481px) {	
+      .span#{$i} {
+        float: left;
+        padding: $padding;
+        width: percentage(($content-width/($spans/$i) - $spacing - $padding*2) / $content-width);		
+      } 
+	  
+	}
+	   
+	  .push-r-#{$i} {
+		margin-left: percentage(($content-width/($spans/$i) - $spacing - $padding*2) / $content-width / 2);
+	   } 
+	  .push-l-#{$i} {
+		margin-right: percentage(($content-width/($spans/$i) - $spacing - $padding*2) / $content-width / 2);
+	   } 
+	
+	   
+	   	   
+		}
+   
+	
+  }
+}
